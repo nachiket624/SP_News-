@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Noto+Sans:wght@300;400;500&family=Shantell+Sans&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+@media (max-width:500px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .had {
+        order: -3;
+        display: flex;
+        width: 400px;
+        height: 150px;
+        background-color: aqua;
+        position: relative;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .vad1 {
+        margin-top: 0.5rem;
+        order: -7;
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .vad2 {
+        order: -5;
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info {
+        order: -9;
+    }
+
+    .title {
+        order: -8;
+    }
+
+    .newsimg {
+        order: -6;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .newsimg img {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .para1 {
+        order: -4;
+        font-family: 'Tiro Devanagari Marathi', serif;
+        font-size: 18px;
+    }
+
+    .para2 {
+        order: -2;
+        font-family: 'Tiro Devanagari Marathi', serif;
+        font-size: 18px;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+    }
+
+    .fa-whatsapp {
+        background: #1eea03;
+        color: white;
+    }
+    
+}
+
+@media (min-width:500px) {
+.social {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+}
+main{
+    columns: 2; /* added this */
+  width: 100%;
+  flex-wrap: wrap;
+    padding: 2rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column ;
+    height: 1400px;
+}
+
+.info{
+    order: -2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    font-size: 24px;
+    font-weight: 18px;
+}
+.newsimg{
+    display: flex;
+    justify-content: center;
+}
+.newsimg img{
+    width: 60%;
+    height: 500px;
+}
+.para1{
+    margin-top: 1.5rem;
+    margin-right:5% ;
+    margin-left: 5%;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+.para2{
+    margin-top: 1.5rem;
+    margin-right:5% ;
+    margin-left: 5%;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+.had{
+    margin-right: 1rem;
+    background: #000;
+    width: 95%;
+    height: 200px;
+}
+.vad1{
+    margin-top: 1.5rem;
+    width: 300px;
+    height: 600px;
+    background: #000;
+}
+.vad2{
+    margin-top: 1.5rem;
+    width: 300px;
+    height: 600px;
+    background: #000;
+}
+
+}

@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block css %}
+    {% endblock %}
+    <title>{% block title %}Site Titel{% endblock %}</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="brand">
+                <label for="brand-label"><a href= "{% url 'index' %}">SP News</a></label>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href= "{% url 'commingsoon' %}">राजकारण</a></li>
+                    <li><a href="{% url 'commingsoon' %}">शिक्षण</a></li>
+                    <li><a href="{% url 'commingsoon' %}">राष्ट्र</a></li>
+                    <li><a href="{% url 'commingsoon' %}">राज्य</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script src="{% static 'js/script.js' %}"></script>
+    {% block content %}
+</body>
+
+</html>
+{% endblock %}

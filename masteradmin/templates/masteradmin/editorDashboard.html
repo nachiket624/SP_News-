@@ -1,0 +1,32 @@
+{% extends 'editorbase.html' %}
+
+{% block content %}
+<main>
+    <section id="event">
+    <div class="container">
+        <div class="titleinfo">
+            <div class="info">
+                <div class="hedding">
+                    <h3>THis is hedding</h3>
+                </div>
+                <div class="moreinfo">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis sit iste consectetur
+                    </span>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="deleteicon">
+                    {% load static %} <img src="{% static "asset\delete.png" %}" alt="home" />
+
+                </div>
+                <div class="editicon">
+                    {% load static %} <img src="{% static "asset\edit.png" %}" alt="home" />
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+</main>
+
+{% endblock %}

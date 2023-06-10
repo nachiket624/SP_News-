@@ -1,0 +1,38 @@
+{% extends 'editorbase.html' %}
+
+{% block content %}
+<section id="editcontent">
+    <form method = "POST" action= "{%url 'eDraft'%}">
+        {% csrf_token %}
+    <div class="editcontainer">
+        <label>Deaft One....</label>
+        <div class="newspage inputcontainer">
+            <label>Newspage:</label>
+            <select name="typepage" id="typepage">
+                <option>Sport</option>
+                <option>Education</option>
+                <option>Politics</option>
+            </select>
+        </div>
+        <div class="imageinput inputcontainer">
+            <label>Newsthumbnail:</label>
+            <input type="file" id="myfile" name="myfile"  accept="image/png, image/jpeg">
+        </div>
+        <div class="title inputcontainer">
+            <label for="newstile">News Title:</label>
+            <input type="text" name="newstile">
+        </div>
+        <div class="newspara1 inputcontainer">
+            <label >News Paragraph1: </label>
+            <textarea name="para1" id="para1" cols="30" rows="10"></textarea>
+        </div>
+        <div class="newspara2 inputcontainer">
+            <label >News Paragraph2: </label>
+            <textarea name="para2" id="para2" cols="30" rows="10"></textarea>
+        </div>
+        <div class="submit inputcontainer" >   <button type="submit" href = "{% url 'nDraft' %}">Submit</button></div>
+    </div>
+</form>
+
+</section>
+{% endblock %}

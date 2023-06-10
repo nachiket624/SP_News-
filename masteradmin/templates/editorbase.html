@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="{% static 'css/editorbase.css' %}">
+    <title>{% block title %}Mysite{% endblock %}</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="nav-title">SP News</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'eDraft' %}">Draft New</a></li>
+                <li><a href="#">Reject</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="{% url 'logout' %}?next=/spadmin/eadmin/">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    {% block content %}
+</body>
+</html>
+{% endblock %}
