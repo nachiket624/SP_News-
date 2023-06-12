@@ -1,0 +1,207 @@
+/* Welcome Image with title */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* .navbar{
+    background: linear-gradient(#f1c183, #ebc6c6);
+    color: white;
+}
+.dropdown-menu{
+    background: linear-gradient(#e71818, #e78e8e);
+} */
+
+.main_image-title{
+    /* min-width: 100vw; */
+    display: grid;
+    grid-template-columns: auto auto;
+    box-sizing: border-box;
+}
+/* Welcome Image Div*/
+
+.box1{
+    position: relative;
+    margin: 2% 2% 0 2%;
+
+}
+
+/* Text on Image */
+.imageWithTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Welcome Image */
+.titleImg{
+    border-radius: 9px;
+}
+
+/* Welcome Image text */
+.image-title{
+    position: absolute;
+    text-align: right;
+    bottom:0;
+    right: 0;
+    color: white;
+    margin: 0 2% 2% 0;
+}
+.custom-img-fluid{
+    width: 100%;
+    max-height: 325px;
+    object-fit: cover;
+    border-end-end-radius: 4px;
+    border-end-start-radius: 4px;
+}
+.img-thumbnail{
+    padding: 0;
+    width: 600px;
+    width:inherit;
+    height: 180px;
+    object-fit: cover;
+}
+/* Adds Section */
+.box2{
+    display: flex;
+    flex-direction: column;
+    margin: 2% 2% 0 2%;
+}
+
+/* Welcome adds */
+.custom-image-with-title{
+    display: flex;
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: 6px;
+    margin: 0 0 2% 0;
+    /* padding: 0 1% 0 0; */
+    max-width: 100%;
+    /* max-width: 246.542px;
+    max-height: 61.448px; */
+    font-family: 'Noto Sans' , sans-serif;
+}
+
+/* Welcome Add text section */
+.section2{
+    text-align: justify;
+    padding-right: 2%;
+}
+
+/* Adds section 1 */
+.adSection1{
+    margin: 2% 1% 3% 1.7%;
+}
+.custom-card-body{
+    padding:0;
+}
+
+/* News Cards title */
+.topNewsTitle{
+    margin: 2% 1% 3% 1.7%;
+    border-bottom-style: solid;
+    border-color: rgb(189, 186, 186);
+    border-width: 1.5px;
+    text-transform: capitalize;
+}
+
+/* News cards before footer */
+.news{
+    margin: 2% 1% 3% 1.7%;
+}
+
+/* News cards div before footer */
+
+.nCards{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+}
+
+/* News cards before footer */
+.newsCard{
+    margin: 0 30px 0 0;
+    box-shadow: 0 0 8px 0 rgb(189, 186, 186);
+}
+/* footer */
+footer{
+    margin-top: 5%;
+    display: flex;
+    background-color: rgb(230, 227, 227);
+    justify-content: center;
+}
+.copyWrite{
+    height: inherit;
+    text-align: end;
+}
+
+
+/* Applying styles on top main image*/
+@media screen and (max-width: 1205px) {
+    .main_image-title{
+        grid-template-columns: auto;
+    }
+}
+
+/* Applying styles on top adds */
+@media screen and (max-width: 1204px) {
+    .box2{
+        flex-direction: row;
+    }
+    .custom-image-with-title{
+        margin: 0 2% 0 0;
+    }
+}
+
+/* Applying styles on top adds */
+@media screen and (max-width: 1018px) {
+    .box2{
+        flex-direction: column;
+        width: 90vw;
+    }
+    .section1{
+        width: 350px;
+    }
+    .custom-image-with-title{
+        margin: 0 0 2% 0;
+    }
+    
+}
+
+/* applying styles on top adds */
+@media screen and (max-width: 570px) {
+    .box2{
+        flex-direction: row;
+        
+    }
+    .custom-image-with-title{
+        flex-direction: column;
+        width: 250px;
+        margin: 0 2% 0 0;
+    }
+    .section1{
+        width: 100%;
+    }
+}
+/* Apply style on top adds */
+@media screen and (max-width: 526px) {
+    .box2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .custom-image-with-title{
+        margin: 0 0 2% 0;
+    }
+}
+
+/* When screen is too small then applying sides top adds   */
+@media screen and (max-width: 265px) {
+    .section1{
+        width: 100%;
+    }
+    .custom-image-with-title{
+        width: 100vw;
+    }
+}
+
+/* News card applying Scrollbar  */
+@media screen and (max-width: 1211px) {
+    .news{
+        overflow: scroll;
+    }
+}
+
