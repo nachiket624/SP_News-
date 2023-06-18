@@ -1,0 +1,20 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block stylesheet%}
+<link rel="stylesheet"  href="{% static 'css/inprocess.css' %}">
+{% endblock %}
+{% block content %}
+<div class="inbox">
+    <a href="/index.html" class="inbox-link">
+      <div class="items">
+        <div class="itemInfo">
+          <h5 class="item-Para"><span class="location">Location : </span> ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam incidunt
+            exercitationem alias odit ipsa repellendus nemo, eos dolorum? Amet?</h5>
+        </div>
+    </a>
+    <div class="respone-btn">
+        <button type="button" class="btn btn-danger Reject-btn">Delete Request</button>
+    </div>
+  </div>
+  </div>
+{% endblock %}
