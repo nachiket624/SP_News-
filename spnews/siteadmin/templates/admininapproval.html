@@ -5,16 +5,16 @@
 {% endblock %}
 {% block content %}
 <div class="inbox">
-    <a href="/index.html" class="inbox-link">
+  {% for item in aprovalitem%}
       <div class="items">
         <div class="itemInfo">
-          <h5 class="item-Para"><span class="location">Location : </span> ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam incidunt
-            exercitationem alias odit ipsa repellendus nemo, eos dolorum? Amet?</h5>
+          <h5 class="item-Para"><span class="location">{{item.location}} : </span> {{item.headding}}</h5>
         </div>
-    </a>
+  
     <div class="respone-btn">
-        <button type="button" class="btn btn-danger Reject-btn">Delete Request</button>
+      <a href="{%url 'delapproval' item.id%}" class="inbox-link"> <button type="button" class="btn btn-danger Reject-btn">Delete Request</button></a>
     </div>
   </div>
+  {%endfor%}
   </div>
 {% endblock %}

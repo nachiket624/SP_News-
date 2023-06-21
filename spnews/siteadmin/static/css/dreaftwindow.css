@@ -5,3 +5,7 @@
     max-width: 700px !important;
     max-height: 400px !important;
 }
+.img-tham{
+    max-height: 700px !important;
+    min-width: 600px !important;
+}

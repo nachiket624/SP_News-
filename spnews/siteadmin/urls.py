@@ -2,8 +2,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('siteadmin', views.siteAdmin, name='siteadmin'),
+    path('spnews/', views.reporterLogin, name='login'),
+    path('logout/', views.reporteLogout, name='logout'),
+    path('siteadmin/', views.siteAdmin, name='siteadmin'),
     path('siteadmin/draft',views.siteDraft,name='draft'),
-    path('siteadmin/approval',views.siteapproval,name='approval'),
-    path('siteadmin/reject',views.sitereject,name='approval'),
+    path('siteadmin/approval',views.siteApproval,name='approval'),
+    path('siteadmin/siteApprovalDelete/<int:id>/',views.siteApprovalDelete,name='delapproval'),
+    path('siteadmin/reject',views.siteReject,name='reject'),
+    path('siteadmin/redraft/<int:id>/',views.siteReDraft,name='redraft'),
 ]

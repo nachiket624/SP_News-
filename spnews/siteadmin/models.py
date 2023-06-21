@@ -11,3 +11,4 @@ class News(models.Model):
     date = models.DateTimeField(default=now, editable=False)
     status = models.CharField(max_length=500,default="DRAFT",editable=False)
     rejectreason = models.CharField(max_length=600,default="none",editable=False)
+    author = models.CharField(max_length=350,blank=False)

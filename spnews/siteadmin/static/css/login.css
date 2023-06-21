@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --clr-1: #0d6efd;
+    --clr-2: rgb(165, 162, 162);
+}
+body{
+    /* background: linear-gradient(rgb(236, 62, 62),rgb(139, 139, 229)); */
+    min-height: 100vh;
+    position: relative;
+}
+#container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.loginBox{
+    background-color: white;
+    height: 60vh;
+    width: 35vw;
+    border-radius: 9px;
+    box-shadow: 0px 0px 30px rgb(93, 91, 91);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+#loginImg{
+    width: 20%;
+}
+
+/* For Username Input */
+.usernameDiv{
+    position: relative;
+    margin-top: 30px;
+    width: 70%;
+}
+#usernameInput{
+    padding: 6px 4px;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--clr-1);
+    border-radius: 5px;
+}
+#usernameInput:focus{
+    box-shadow: 0px 0px 8px var(--clr-1);
+}
+
+
+/* For Password Input */
+.passwordDiv{
+    position: relative;
+    margin-top: 30px;
+    width: 70%;
+}
+#passwordInput{
+    padding: 6px 4px;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--clr-1);
+    border-radius: 5px;
+}
+#passwordInput:focus{
+    box-shadow: 0px 0px 8px var(--clr-1);
+}
+
+

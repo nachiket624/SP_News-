@@ -37,3 +37,14 @@ class DraftNews(forms.ModelForm):
                 "aria-label": ".form-control-lg example"
             }),
         }
+
+
+class ReDraftNews(forms.ModelForm):
+    class Meta:
+        model = News
+        widgets = {'status': forms.HiddenInput()}
+        fields = ["headding", "para1", "para2", "img", "tag", "location"]
+        labels = {"headding": "Hedding", "para1": "Pragraph 1", "para2": "Paragraph 2",
+                  "img": "Upload Image", "tag": "Tag's", "location": "Loaction"}
+
+       

@@ -1,0 +1,17 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block stylesheet%}
+<link rel="stylesheet" href="{% static 'css/dreaftwindow.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h1>Update Band</h1>
+
+    <form action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit">
+   </form>
+</div>
+{% endblock %}
