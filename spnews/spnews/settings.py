@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_05dfx8_e=qe_7dv*zoj*ecgk+a_60wu7(6da%6&ttup8n_toh'
+SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-_05dfx8_e=qe_7dv*zoj*ecgk+a_60wu7(6da%6&ttup8n_toh')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = str(os.environ.get('DEBUG')) == "1"
 
 ALLOWED_HOSTS = []
-
+if not DEBUG:
+    ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOSTS')]
 
 # Application definition
 
@@ -81,7 +82,7 @@ DATABASES = {
             'ENGINE': 'django.db.backends.mysql',  
             'NAME': 'spnews',  
             'USER': 'root',  
-            'PASSWORD': '1900340220',  
+            'PASSWORD': str(os.environ.get('dbpass')), 
             'HOST': '127.0.0.1',  
             'PORT': '3306',  
             'OPTIONS': {  
@@ -135,4 +136,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  
 
-LOGIN_REDIRECT_URL = '/spnews'
+LOGIN_REDIRECT_URL = '/spnews/'
+LOGOUT_REDIRECT_URL = '/spnews/'

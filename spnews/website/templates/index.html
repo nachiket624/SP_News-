@@ -1,32 +1,47 @@
 {% extends 'base.html' %}
 {% block content %}
+<p class="marquee ">{%for item in redin %}<span>{{item.rebine}}</span>{%endfor%}</p>
+
+
 <div class="main_image-title">
     <div class="box1">
-        <div class="imageWithTitle">
-            <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="titleImg img-fluid" alt="...">
-            <div class="image-title">
-                <h4>मजकूर शीर्षक</h4>
-                <p>पहिल्या स्लाइडसाठी काही प्रतिनिधी प्लेसहोल्डर सामग्री.</p>
+        {% for item in indexse1 %}
+        <a href="{%url 'detail' item.id%}">
+            <div class="imageWithTitle">
+                <img src="/media/{{item.img}}" class="titleImg" alt="...">
+                <div class="image-title">
+                    <h4>{{item.headding}}</h4>
+                </div>
             </div>
-        </div>
+            </a>
+        
+        {% endfor %}
     </div>
     <div class="box2">
+        {%for item in indexse2 %}
+        <a href="{%url 'detail' item.id%}">
         <div class="custom-image-with-title">
             <section class="section1">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-thumbnail" alt="...">
+                <img src="/media/{{item.img}}" class="img-thumbnail" alt="...">
             </section>
             <section class="section2">
-                <p>आम्ही वेबसाइटवरील जाहिराती स्वीकारू शकतो. जाहिरातींसाठी आमच्याशी खालील क्रमांक १२३४५६७८८९ वर संपर्क साधा</p>
+                <p>{{item.headding}}</p>
             </section>
         </div>
+        </a>
+        {% endfor %}
+        {%for item in indexse3 %}
+        <a href="{%url 'detail' item.id%}">
         <div class="custom-image-with-title">
             <section class="section1">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-thumbnail" alt="...">
+                <img src="/media/{{item.img}}" class="img-thumbnail" alt="...">
             </section>
             <section class="section2">
-                <p>आम्ही वेबसाइटवरील जाहिराती स्वीकारू शकतो. जाहिरातींसाठी आमच्याशी खालील क्रमांक १२३४५६७८८९ वर संपर्क साधा</p>
+                <p>{{item.headding}}</p>
             </section>
         </div>
+        </a>
+        {% endfor %}
     </div>
 </div>
 <div class="adSection1">
@@ -36,7 +51,8 @@
         </div>
         <div class="card-body">
             <h5 class="card-title">जाहिरात विभाग</h5>
-            <p class="card-text">आम्ही वेबसाइटवरील जाहिराती स्वीकारू शकतो. जाहिरातींसाठी आमच्याशी खालील क्रमांक १२३४५६७८८९ वर संपर्क साधा</p>
+            <p class="card-text">आम्ही वेबसाइटवरील जाहिराती स्वीकारू शकतो. जाहिरातींसाठी आमच्याशी खालील क्रमांक
+                +91 96373 77616 वर संपर्क साधा</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
@@ -51,59 +67,35 @@
     </div>
     <div class="news">
         <div class="nCards">
+            {%for item in indexse4 %}
             <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <img src="/media/{{item.img}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
+                    <h5 class="card-title">{{item.location}}</h5>
+                    <a href="{%url 'detail' item.id%}">
+                    <p class="card-text">{{item.headding}}</p>
+                    </a>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
+                    <small class="text-body-secondary">{{item.date}}</small>
                 </div>
             </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
 
-  <!-- Horizontal Adds section -->
-  <div class="adSection1">
+<!-- Horizontal Adds section -->
+<div class="adSection1">
     <div class="card">
         <div class="card-header">
             जाहिरात
         </div>
         <div class="card-body custom-card-body">
             <!-- <h5 class="card-title">जाहिरात विभाग</h5> -->
-            <p class="card-text"><img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" id="custom-ads-img" class="img-fluid custom-img-fluid" alt=""></p>
+            <p class="card-text"><img
+                    src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    id="custom-ads-img" class="img-fluid custom-img-fluid" alt=""></p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
@@ -117,46 +109,22 @@
     </div>
     <div class="news">
         <div class="nCards">
+            {% for item in indexse5 %}
             <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <img src="/media/{{item.img}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
+                   
+                    <h5 class="card-title">{{item.location}}</h5>
+                    <a href="{%url 'detail' item.id%}">
+                    <p class="card-text">{{item.headding}}</p>
+                </a>
+
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
+                    <small class="text-body-secondary">{{item.date}}</small>
                 </div>
             </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -169,7 +137,9 @@
         </div>
         <div class="card-body custom-card-body">
             <!-- <h5 class="card-title">जाहिरात विभाग</h5> -->
-            <p class="card-text"><img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-fluid custom-img-fluid" alt=""></p>
+            <p class="card-text"><img
+                    src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    class="img-fluid custom-img-fluid" alt=""></p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
     </div>
@@ -187,45 +157,19 @@
     </div>
     <div class="news">
         <div class="nCards">
+            {% for item in indexse6 %}
             <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+                <img src="/media/{{item.img}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
+                    <h5 class="card-title">{{item.location}}</h5>
+                    <a href="{%url 'detail' item.id%}">
+                    <p class="card-text">{{item.headding}}</p>
+                    </a>
                 </div>
                 <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
+                    <small class="text-body-secondary">{{item.date}}</small>
                 </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
-            </div>
-            <div class="card newsCard">
-                <img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">बातमीचे शीर्षक</h5>
-                    <p class="card-text">अतिरिक्त सामग्रीसाठी नैसर्गिक लीड-इन म्हणून खाली समर्थन मजकूर असलेले हे एक विस्तृत कार्ड आहे. ही सामग्री थोडी मोठी आहे.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-body-secondary">3 मिनिटांपूर्वी शेवटचे अपडेट केले</small>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -236,7 +180,9 @@
             </div>
             <div class="card-body custom-card-body">
                 <!-- <h5 class="card-title">जाहिरात विभाग</h5> -->
-                <p class="card-text"><img src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-fluid custom-img-fluid" alt=""></p>
+                <p class="card-text"><img
+                        src="https://plus.unsplash.com/premium_photo-1664279047458-ace1fa02d6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        class="img-fluid custom-img-fluid" alt=""></p>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
         </div>

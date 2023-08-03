@@ -16,7 +16,7 @@
             </div>
     <div class="respone-btn">
         <a href="{% url 'redraft' item.id %}"><button  type="button" class="btn btn-success">Draft</button></a>
-        <button type="button" class="btn btn-danger Reject-btn">Delete</button>
+        <a href="{% url 'delreject' item.id %}"><button type="button" class="btn btn-danger Reject-btn">Delete</button></a>
     </div>
 </div>
 {% endfor %}

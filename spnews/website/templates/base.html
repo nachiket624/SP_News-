@@ -6,17 +6,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>News App</title>
-        <!-- <link rel="stylesheet" href="bootstrap5_3/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="bootstrap5_3/css/bootstrap.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="style/homePageStyle.css"> -->
-    <link rel="stylesheet"  href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet"  href="{% static 'css/homePageStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homePageStyle.css' %}">
+    {% block stylesheet %}
+    {% endblock %}
 
 </head>
+
 <body>
-      <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #FFA41B">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">लोगो</a>
+            <a class="navbar-brand" href="#">
+                <img src ="{%static 'icons/spnews_logo.png' %}" alt="Bootstrap" width="30" height="24">
+              </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -32,24 +37,25 @@
                 <div class="navigationLinks offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <div class="navbar-nav">
-                            
-                            <a class="nav-link active" aria-current="page" href="#">शिक्षण</a>
-                            <a class="nav-link active" href="#">राजकारण</a>
-                            <a class="nav-link active" href="#">इतर</a>
-                            <a class="nav-link active" href="#">इतर</a>
+
+                            {% for item in Category %}
+                            <a class="nav-link active" href="#">{{item.category}}</a>
+                            {%endfor%}
                             <li class="nav-item dropdown position-static">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     इतर बातम्या
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                  <li><a class="dropdown-item" href="#">बातम्या १</a></li>
-                                  <li><a class="dropdown-item" href="#">बातम्या 2</a></li>
-                                  <li><a class="dropdown-item" href="#">बातम्या 3</a></li>
-                                  <!-- <li><hr class="dropdown-divider"></li>
+                                    {% for item2 in categorydrop %}
+                                    <li><a class="dropdown-item" href="#">{{item2.category}}</a></li>
+                                    {%endfor%}
+
+                                    <!-- <li><hr class="dropdown-divider"></li>
                                   <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                                 </ul>
                             </li>
-                            
+
                         </div>
                     </ul>
                 </div>

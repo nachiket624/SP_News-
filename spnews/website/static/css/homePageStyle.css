@@ -1,16 +1,63 @@
 /* Welcome Image with title */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-/* .navbar{
-    background: linear-gradient(#f1c183, #ebc6c6);
-    color: white;
+
+a{
+    text-decoration: none;
+    color: #000;
 }
-.dropdown-menu{
-    background: linear-gradient(#e71818, #e78e8e);
-} */
+
+body{
+    background-color: #FFF6F4;
+    font-family: 'DevanagariHedding';
+    font-weight: 600;
+}
+.marquee {
+   
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .marquee span {
+    margin-top: 0.8rem;
+    display: inline-block;
+    font-size: 24pt;
+    font-weight: 600;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+    color: #F86F03;
+    width: 1200px;
+
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+
+
+.navbar{
+    font-size: 24px;
+    font-weight: 500;
+}
+.navbar img{
+    width: 140px;
+    height: 70px;
+} 
+
+.card-title{
+    font-size: 16pt;
+}
 
 .main_image-title{
     /* min-width: 100vw; */
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: auto auto;
     box-sizing: border-box;
@@ -22,6 +69,10 @@
     margin: 2% 2% 0 2%;
 
 }
+.box1 img{
+    width: 600px !important;
+    height: 500px !important;
+}
 
 /* Text on Image */
 .imageWithTitle{
@@ -30,9 +81,10 @@
 }
 
 /* Welcome Image */
-.titleImg{
+/* .titleImg{
     border-radius: 9px;
-}
+   
+} */
 
 /* Welcome Image text */
 .image-title{
@@ -70,8 +122,7 @@
     border: 1px solid rgb(199, 197, 197);
     border-radius: 6px;
     margin: 0 0 2% 0;
-    /* padding: 0 1% 0 0; */
-    max-width: 100%;
+    min-width: 400px;
     /* max-width: 246.542px;
     max-height: 61.448px; */
     font-family: 'Noto Sans' , sans-serif;
@@ -80,7 +131,10 @@
 /* Welcome Add text section */
 .section2{
     text-align: justify;
-    padding-right: 2%;
+    padding-right: 2rem;
+}
+.section2 p{
+    padding-left: 1rem;
 }
 
 /* Adds section 1 */
@@ -117,6 +171,10 @@
     margin: 0 30px 0 0;
     box-shadow: 0 0 8px 0 rgb(189, 186, 186);
 }
+.newsCard img{
+    max-width: 270px;
+    max-height: 150px;
+}
 /* footer */
 footer{
     margin-top: 5%;
@@ -135,6 +193,12 @@ footer{
     .main_image-title{
         grid-template-columns: auto;
     }
+    .box1 img{
+        margin-right: 1rem;
+        width: auto !important;
+        height: 400px !important;
+    }
+    
 }
 
 /* Applying styles on top adds */
@@ -159,7 +223,7 @@ footer{
     .custom-image-with-title{
         margin: 0 0 2% 0;
     }
-    
+   
 }
 
 /* applying styles on top adds */
@@ -176,6 +240,8 @@ footer{
     .section1{
         width: 100%;
     }
+   
+    
 }
 /* Apply style on top adds */
 @media screen and (max-width: 526px) {
@@ -186,6 +252,8 @@ footer{
     .custom-image-with-title{
         margin: 0 0 2% 0;
     }
+  
+    
 }
 
 /* When screen is too small then applying sides top adds   */
@@ -196,6 +264,8 @@ footer{
     .custom-image-with-title{
         width: 100vw;
     }
+  
+    
 }
 
 /* News card applying Scrollbar  */
@@ -203,5 +273,7 @@ footer{
     .news{
         overflow: scroll;
     }
+    
+    
 }
 

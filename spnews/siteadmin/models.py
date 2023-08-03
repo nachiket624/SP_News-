@@ -12,3 +12,14 @@ class News(models.Model):
     status = models.CharField(max_length=500,default="DRAFT",editable=False)
     rejectreason = models.CharField(max_length=600,default="none",editable=False)
     author = models.CharField(max_length=350,blank=False)
+
+class rebine(models.Model):
+    rebine = models.CharField(max_length=200,blank=True)
+class ChoiseListCategory(models.Model):
+    category = models.CharField(max_length=600,blank=True)
+    categoryvalue = models.CharField(max_length=600,blank=True)
+
+
+class ChoiseListSection(models.Model):
+    section = models.CharField(max_length=600,blank=True)
+    sectionvalue = models.CharField(max_length=600,blank=True)
