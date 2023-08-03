@@ -1,0 +1,25 @@
+{% extends 'madminbase.html' %}
+{% load static %}
+{% block stylesheet%}
+<link rel="stylesheet"  href="{% static 'css/mstyle.css' %}">
+{% endblock %}
+{% block content %}
+<div class="inbox">
+    {% for item in madminrequest %}
+    <div class="inbox">
+        <a href="{% url 'scalen' item.id %}" class="inbox-link">
+          <div class="items">
+            <div class="itemInfo">
+              <p class="idinfo">Form: <span>{{item.author}}</span></p>
+              <p>{{item.location}} : <span>{{item.headding}}</span></p>
+
+            </div>
+        </a>
+        <div class="infodate">
+          <p>12-jan-2022</p>
+        </div>
+      </div>
+      </div>
+  {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet%}
+<link rel="stylesheet"  href="{% static 'css/detail.css' %}">
+<link rel="stylesheet" href="bootstrap5_3/css/bootstrap.min.css" crossorigin="anonymous">
+
+{% endblock %}
+{% block content %}
+<div class="container conone">
+    <!--! side 1 -->
+    <div class="row">
+        {% for data in showD%}
+      <div class="col-9">
+        <div class="row">
+          <div class="author">
+            <p class="NewsHedding">{{data.headding}}</p>
+            <p class="location">{{data.location}}
+            </p>
+            <p class="date">{{data.date}}</p>
+          </div>
+          <div class="imageholder">
+            <img src="/media/{{data.img}}" class="img-thumbnail mb-4" alt="...">
+          </div>
+          <!-- <div class="row  d-flex justify-content-center ad1 mb-5">
+            <img src="/media/{{data.img}}" alt="">
+          </div> -->
+          
+          <div class="para1">
+            {{data.para1}}
+          </div>
+          <!-- <div class="imageholder">
+            <img src="/media/{{data.img}}" class="img-thumbnail mb-4" alt="...">
+          </div> -->
+          <div class="para1">
+            {{data.para2}}
+          </div>
+        </div>
+      </div>
+      <!--! side 2 -->
+      <div class="col">
+        <div class="row ">
+          <div class="had mt-4">
+
+          </div>
+          <div class="had mt-4">
+
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+    <!-- ! suggestionsection -->
+    <!-- <div class="foryoudesk">
+      <div class="row row-cols-1 row-cols-md-4 mt-4 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/media/icons/news11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/media/icons/news11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/media/icons/news11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="/media/icons/news11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <footer>
+    ©spnews.com 2023
+  </footer>
+  <script src="bootstrap5_3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </html>
+{% endblock %}

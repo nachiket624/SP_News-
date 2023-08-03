@@ -1,0 +1,88 @@
+{% extends 'madminbase.html' %} {% load static %} {% block stylesheet%}
+<link rel="stylesheet" href="{% static 'css/madminscalmailn.css' %}" />
+<link rel="stylesheet" href="{% static 'css/mstyle.css' %}" />
+{% endblock %}
+ {% block content %}
+
+
+        
+          <button><a class="dropdown-item"   data-bs-toggle="modal" data-bs-target="#addcategoriesmodel">➕ Add Categories</a></button>
+          <button><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addsectionodel">➕ Add Section</a></button>
+          <button><a class="dropdown-item" href="#">➕ Register Reporter</a></button>
+
+          <button><a class="dropdown-item" href="#">❌ Delete User</a></button>
+      
+
+
+      <!-- ! Add Categories Model -->
+
+      <form method="POST" name="Categoriesform" onsubmit="return validateFormCategoriesorm()" >
+        <div class="modal fade" id="addcategoriesmodel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Chose News Location</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Add Categories</span>
+                            <input name = "inputcategories" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                          </div>
+                          <ul>
+                            {% for  categories in categorieslist %}
+                            <ul>{{categories.category}}</ul>
+                            {% endfor %}
+                          </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button name="btn_categories" type="submit button" class="btn btn-primary">Add </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+      <!-- ! Add Section Model -->
+
+      <form method="POST" name="Sectionform" onsubmit="return validateFormSection()" >
+        <div class="modal fade" id="addsectionodel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Chose News Location</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Add Section</span>
+                            <input name = "inputsection" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                          </div>
+                          <ul>
+                            {% for  section in sectionlist %}
+                            <ul>{{section.sectionvalue}}</ul>
+                            {% endfor %}
+                          </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button name="btn_Section" type="submit button" class="btn btn-primary">Add </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+      {% endblock %}
+      {% block scripts %}
+      <script src="{% static 'js/utilites.js' %}"></script>
+
+      {% endblock %}

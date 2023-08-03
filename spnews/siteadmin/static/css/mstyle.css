@@ -1,0 +1,41 @@
+.body{
+    margin-top: 1rem !important;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(245, 245, 245, 0.684);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-inline: 1rem;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+    
+}
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.inbox-link {
+    text-decoration: none;
+    text-transform: none;
+    color: rgb(0, 0, 0);
+    font-style: bold;
+}
+.infodate{
+    white-space: nowrap;
+    margin-left: auto;
+}
+.idinfo{
+    font-weight: 600;
+}

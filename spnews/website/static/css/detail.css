@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+
+.navbar img{
+    width: 140px;
+    height: 70px;
+} 
+footer{
+
+    display: flex;
+    width: 100%;
+    background-color: rgb(230, 227, 227);
+    justify-content: center;
+}
+.copyWrite{
+    height: inherit;
+    text-align: end;
+}
+.newsmain{
+    display: flex;
+    display:block; width:100%;
+}
+
+.NewsHedding{
+    font-family: 'DevanagariHedding';
+    font-size: 34px;
+    font-weight: 500;
+    color: #525FE1;
+}
+
+.ad1 img{
+    height: 200px;
+}
+.imageholder{
+    display: flex;
+    justify-content: center;
+}
+.imageholder img{
+    height: 400px;
+  width: 800px !important;
+}
+.para1{
+font-family: 'Devanagari';
+margin-top: 2rem; 
+margin-bottom: 2rem;
+text-align: justify;
+font-size: 18px;
+}
+
+.col-9
+{
+    margin-top: 2rem;
+    background: #FFF6F4;
+}
+
+
+.had{
+    height: 700px;
+    background: #000;
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+.had{
+    display: none;
+}
+.col-9{
+    width: auto !important;
+}
+.foryoudesk{
+    display: none;
+}
+.ad1{
+
+    
+    height: 100px;
+    width: 100%;
+    /* padding-bottom: 2rem; */
+}
+ /* padding-bottom: 2rem; */
+
+
+
+}

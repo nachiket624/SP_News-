@@ -1,0 +1,33 @@
+
+.author{
+    font-weight: 400;
+    font-size: large;
+    font-style: bold;
+}
+.Hedding{
+    font-weight: 700;
+    font-size: large;
+}
+.imagecontiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagecontiner img{
+    
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 500px;
+    max-height: 500px;
+  
+    
+}
+.para1{
+    text-align: justify;
+}
+.para2{
+    text-align: justify;
+}
+.reponce_btn{
+    margin-bottom: 2rem;
+}

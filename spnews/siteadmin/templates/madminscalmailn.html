@@ -1,0 +1,112 @@
+{% extends 'madminbase.html' %} {% load static %} {% block stylesheet%}
+<link rel="stylesheet" href="{% static 'css/madminscalmailn.css' %}" />
+<link rel="stylesheet" href="{% static 'css/mstyle.css' %}" />
+{% endblock %}
+{% block content %}
+<div class="container">
+    {%for item in scalen%}
+    <div class="HeadDateAuthor mt-4">
+        <p class="author">Author: <span>{{item.author}}</span></p>
+        <p class="Hedding">
+            {{item.headding}}
+        </p>
+        <p class="date">12-jan-2021</p>
+    </div>
+    <div class="imagecontiner">
+        <img src="/media/{{item.img}}" alt="" />
+    </div>
+    <br />
+    <div class="paras">
+        <div class="para1">
+            {{item.para1}}
+        </div>
+        <br />
+        <div class="para2">
+            {{item.para2}}
+        </div>
+        <br />
+        {%endfor%}
+    </div>
+    <div class="reponce_btn">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Reject
+        </button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+            Accept
+        </button>
+
+        <!-- Modal -->
+        <form method="POST">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Feedback</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                name="Rejectrep"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="submit button" class="btn btn-primary" name="rejectform">Send 📩</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <form method="POST">
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Chose News Location</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                        <label for="cars">Choose Section</label>
+
+                        <select name="topage">
+                            {% for item in sectiondrop %}
+                            <option value="{{item.sectionvalue}}">{{item.section}}</option>
+                           {%endfor%}
+                        </select>
+
+                        <div class="mt-4"> <label for="cars">Choose Category</label>
+
+                            <select name="tocat">
+                                {% for item in categoriesdrop %}
+                                <option value="{{item.categoryvalue}}">{{item.category}}</option>
+                               {%endfor%}
+                             </select>
+                        </div>
+
+                        <!-- <input type="submit" value="Submit"> -->
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit button" name="acceptform" class="btn btn-primary">Send 📩</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+</div>
+
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
